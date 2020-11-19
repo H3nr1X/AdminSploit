@@ -22,7 +22,7 @@ ________________________________________________________________________________
 # Upcoming features
 
 256-bit end-to-end encryption  
-File dowloading from Google Drive
+File dowloading from Google Drive  
 Changing wallpaper  
 Execution on startup  
 Disabling Command Prompt and Task Manager  
