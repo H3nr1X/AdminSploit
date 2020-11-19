@@ -1,5 +1,6 @@
 # AdminSploit
 This is a remote access tool/backdoor written in rust.  
+It uses Discord webhooks to transfer files to the client.
 
 
 ![alt text](https://github.com/H3nr1X/AdminSploit/blob/main/showcase.png?raw=true)
@@ -10,7 +11,8 @@ ______________________________________________________________________________
 # Current features  
 
 Reverse tcp socket    
-Low antivirus detection   
+Low antivirus detection  
+
 Remote Command Promp execution  
 Remote Powershell execution  
 Screen capture  
