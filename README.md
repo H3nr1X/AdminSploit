@@ -12,7 +12,6 @@ ______________________________________________________________________________
 
 Reverse tcp socket    
 Low antivirus detection  
-
 Remote Command Promp execution  
 Remote Powershell execution  
 Screen capture  
@@ -24,7 +23,7 @@ ________________________________________________________________________________
 # Upcoming features
 
 256-bit end-to-end encryption  
-File dowloading  
+File dowloading from Google Drive
 Changing wallpaper  
 Execution on startup  
 Disabling Command Prompt and Task Manager  
