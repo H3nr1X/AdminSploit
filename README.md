@@ -2,7 +2,7 @@
 This is a remote access tool/backdoor written in rust.  
 It uses Discord webhooks to transfer files to the client.
 
-
+![alt text](https://github.com/H3nr1X/AdminSploit/blob/main/showcase.png?raw=true)
 
 
 ______________________________________________________________________________
