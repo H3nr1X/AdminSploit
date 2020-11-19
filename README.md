@@ -11,7 +11,7 @@ ______________________________________________________________________________
 
 Reverse tcp socket    
 Low antivirus detection  
-Remote Command Promp execution  
+Remote Command Prompt execution  
 Remote Powershell execution  
 Screen capture  
 Webcam capture  
