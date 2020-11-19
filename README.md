@@ -34,4 +34,4 @@ ________________________________________________________________________________
 
 Capturing a screen causes a memory leak  
 Webcam capture may not work and crash the connection  
-Certain commands from user-end may crash the command-handler thread on the server  
+Certain invalid commands from user-end may crash the command-handler thread on the server, and the user has to reconnect  
